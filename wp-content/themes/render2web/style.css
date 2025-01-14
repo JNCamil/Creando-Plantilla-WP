@@ -326,6 +326,10 @@ Use it to make something cool, have fun, and share what you've learned with othe
     padding:10px;
     text-align: center;
   }
+  .post-gallery img{
+    width: 150px;
+    height: 150px;
+  }
   
   .post-gallery h2{
     color:#fff;

@@ -8,22 +8,7 @@
 
       <?php while (have_posts()): the_post(); ?>
 
-        <div class="blog-post">
-          <h2 class="blog-post-title"><a href="<?php the_permalink(); ?>" > <?php the_title(); ?> </a></h2> 
-          <p class="blog-post-meta"> 
-            <?php the_time('F j, Y g:i a'); ?> <a href=<?php echo get_author_posts_url(get_the_author_meta("ID")); ?>"><?php the_author(); ?></a>
-          </p>
-
-          <?php if(has_post_thumbnail()): ?>
-            <div class="post-thumbnail">
-              <?php the_post_thumbnail('thumbnail') ?>
-            </div>
-          <?php endif; ?>
-          <p><?php the_excerpt(); ?></p>
-
-          
-
-        </div><!-- /.blog-post -->
+        <?php get_template_part('content', get_post_format()) ?>
 
       <?php endwhile; ?>
 

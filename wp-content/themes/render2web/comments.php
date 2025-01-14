@@ -25,7 +25,17 @@
 
 <?php 
 
-  wp_list_comments($args, $comments)
+  wp_list_comments($args, $comments);
+
+  $comments_args = array(
+    'label_submit' => 'Comentar',
+    'title_reply' => 'Escriba una respuesta al comentario',
+    'comment_notes_after' => '',
+    'comment_field' => '<p class="comment-form-comment"><label for="comment">' . _x('Comment', 'noun') . '</label><br/>
+    <textarea id="comment" name="comment" aria-required="true"></textarea></p>',
+  );
+  
+  comment_form($comments_args);
 
 
 
