@@ -24,7 +24,7 @@
       <div class="container">
       <nav class="navbar navbar-expand-md navbar-dark ">
     <div class="container-fluid">
-        <a class="navbar-brand" href="#"><?php bloginfo('name'); ?></a>
+        <a class="navbar-brand" href="<?php echo get_home_url(); ?>"><?php bloginfo('name'); ?></a>
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#main-menu" aria-controls="main-menu" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
         </button>

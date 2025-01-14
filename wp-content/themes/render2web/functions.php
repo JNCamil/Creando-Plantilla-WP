@@ -77,3 +77,22 @@ class bootstrap_5_wp_nav_menu_walker extends Walker_Nav_menu
 }
 // register a new menu
 register_nav_menu('main-menu', 'Main menu');
+
+
+//Soporte para este TEMA
+function wpb_theme_setup(){
+  add_theme_support('post-thumbnails'); //Soporte para la imagen destacada
+
+  //Soporte para formatos de post
+  add_theme_support('post-formats', array('aside', 'gallery')); //Nos pasamos un array con los tipos de posts que vamos a permitir ASIDE Y GALLERY
+
+}
+add_action('after_setup_theme', 'wpb_theme_setup'); //Añadimos nuestro bloque al hook
+
+
+//Controlar cantidad de carácteres excerpt
+function set_excerpt_length(){
+	return 25;
+}
+
+add_filter('excerpt_length', 'set_excerpt_length');
