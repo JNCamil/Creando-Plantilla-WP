@@ -9,7 +9,7 @@
       <?php while (have_posts()): the_post(); ?>
 
         <div class="blog-post">
-          <h2 class="blog-post-title"><a href="<?php the_permalink(); ?>" > <?php the_title(); ?> </a></h2> 
+          <h2 class="blog-post-title"><?php the_title(); ?></h2> 
           <p class="blog-post-meta"> 
             <?php the_time('F j, Y g:i a'); ?> <a href=<?php echo get_author_posts_url(get_the_author_meta("ID")); ?>"><?php the_author(); ?></a>
           </p>
@@ -19,7 +19,11 @@
               <?php the_post_thumbnail('thumbnail') ?>
             </div>
           <?php endif; ?>
-          <p><?php the_excerpt(); ?></p>
+          <p><?php the_content(); ?></p>
+
+          <hr>
+
+          <?php comments_template(); ?>
 
           
 
