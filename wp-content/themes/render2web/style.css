@@ -256,6 +256,11 @@ Use it to make something cool, have fun, and share what you've learned with othe
      padding:1px;
      border:#ccc 1px solid;
    }
+   
+   .caja img{
+    width: 250px;
+    height: 250px;
+  }
   
    .blog-nav a{
      color:#fff;

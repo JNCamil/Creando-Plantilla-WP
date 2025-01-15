@@ -96,3 +96,53 @@ function set_excerpt_length(){
 }
 
 add_filter('excerpt_length', 'set_excerpt_length');
+
+//Ubicación de los widgets
+function wpb_init_widgets(){
+  register_sidebar(array(
+    'name' => 'Sidebar',
+    'id' => 'sidebar',
+    'before_widget' => '<div class="modulo-sidebar">',
+    'after_widget' => '</div>',
+    'before_title' => '<h4>',
+    'after_title' => '</h4>',
+  ));
+
+
+  //Configuramos las cajas
+  register_sidebar(array(
+    'name' => 'Caja1',
+    'id' => 'caja1',
+    'before_widget' => '<div class="caja">',
+    'after_widget' => '</div>',
+    'before_title' => '<h3>',
+    'after_title' => '</h3>',
+  ));
+
+  register_sidebar(array(
+    'name' => 'Caja2',
+    'id' => 'caja2',
+    'before_widget' => '<div class="caja">',
+    'after_widget' => '</div>',
+    'before_title' => '<h3>',
+    'after_title' => '</h3>',
+  ));
+
+  register_sidebar(array(
+    'name' => 'Caja3',
+    'id' => 'caja3',
+    'before_widget' => '<div class="caja">',
+    'after_widget' => '</div>',
+    'before_title' => '<h3>',
+    'after_title' => '</h3>',
+  ));
+
+}
+
+add_action('widgets_init', 'wpb_init_widgets'); //Añadimos nuestro bloque al hook
+
+
+//Archivo personalizado
+require get_template_directory(). '/inc/customizer.php'; 
+//CREAMOS EL ARCHIVO EN ESTA RUTA: En ese archivo desarrollaremos la lógica
+add_action('customize_register', 'wpb_customize_register'); //Añadimos nuestro bloque al hook

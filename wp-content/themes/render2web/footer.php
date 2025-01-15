@@ -1,7 +1,7 @@
-<div class="col-md-4 modulo-sidebar">
+<!--<div class="col-md-4 modulo-sidebar">
              <h4>Calendario</h4>
              <img src="img/Calendario.jpg" class="img-responsive">
-          </div>
+          </div>-->
 
 
       </div><!-- /.row -->
